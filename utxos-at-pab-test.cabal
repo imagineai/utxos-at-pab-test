@@ -19,6 +19,7 @@ executable contract
         -threaded -rtsopts -with-rtsopts=-N -Wall -Wcompat
         -Wincomplete-uni-patterns -Wincomplete-record-updates
         -Wno-missing-import-lists -Wredundant-constraints -O0
+        -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas
 
     build-depends:
         , aeson
