@@ -13,14 +13,14 @@ and spend-pay actions.
 
 # Other documents
 
-- (public testnet log)[https://github.com/imagineai/utxos-at-pab-test/blob/master/public-testnet-log]
-- (private testnet log)[https://github.com/imagineai/utxos-at-pab-test/blob/master/private-testnet-log]
+- [public testnet log](https://github.com/imagineai/utxos-at-pab-test/blob/master/public-testnet-log)
+- [private testnet log](https://github.com/imagineai/utxos-at-pab-test/blob/master/private-testnet-log)
 
 # Building and running
 
-`$> cabal build contract`
-`$> cabal exec -- contract --config pab-config.yml migrate`
-`$> cabal exec -- contract --config pab-config.yml webserver --passphrase [PASS]`
+- `$> cabal build contract`
+- `$> cabal exec -- contract --config pab-config.yml migrate`
+- `$> cabal exec -- contract --config pab-config.yml webserver --passphrase [PASS]`
 
 # Actions
 
