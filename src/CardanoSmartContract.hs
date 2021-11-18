@@ -41,7 +41,7 @@ mkContractValidator
     -> ()
     -> ScriptContext
     -> Bool
-mkContractValidator _ _ _ = (\x -> x==x) (1001 :: Integer)
+mkContractValidator _ _ _ = (\x -> x==x) (42 :: Integer)
 
 -- Validator boilerplate
 data Contracting
@@ -61,12 +61,27 @@ contractAddress :: Ledger.Address
 contractAddress = scriptAddress contractValidator
 
 -- OffChain Code
+run :: Contract () BugContractSchema Text ()
+run = start >> endpoints
+
 type BugContractSchema = Endpoint "utxos" ()
                      .\/ Endpoint "spend" ()
                      .\/ Endpoint "spend-pay" ()
 
-run :: Contract () BugContractSchema Text ()
-run = start >> endpoints
+endpoints :: Contract () BugContractSchema Text ()
+endpoints = forever $ handleError logError $ awaitPromise $
+            eopUtxos       `select`
+            eopSpend       `select`
+            eopSpendAndPay
+  where
+    eopUtxos :: Promise () BugContractSchema Text ()
+    eopUtxos = endpoint @"utxos" $ const opUtxos
+
+    eopSpend :: Promise () BugContractSchema Text ()
+    eopSpend = endpoint @"spend" $ const opSpend
+
+    eopSpendAndPay :: Promise () BugContractSchema Text ()
+    eopSpendAndPay = endpoint @"spend-pay" $ const opSpendAndPay
 
 start :: Contract () s Text ()
 start = do
@@ -82,21 +97,6 @@ start = do
 
     logInfo @P.String $ "Contract started."
     logInfo @P.String $ "Addr: " ++ P.show contractAddress
-
-endpoints :: Contract () BugContractSchema Text ()
-endpoints = forever $ handleError logError $ awaitPromise $
-            eopUtxos `select`
-            eopSpend `select`
-            eopSpendAndPay
-  where
-    eopUtxos :: Promise () BugContractSchema Text ()
-    eopUtxos = endpoint @"utxos" $ const opUtxos
-
-    eopSpend :: Promise () BugContractSchema Text ()
-    eopSpend = endpoint @"spend" $ const opSpend
-
-    eopSpendAndPay :: Promise () BugContractSchema Text ()
-    eopSpendAndPay = endpoint @"spend-pay" $ const opSpendAndPay
 
 opUtxos :: Contract () s Text ()
 opUtxos = do
@@ -114,13 +114,13 @@ opSpend = do
                     _           -> throwError "Unexpected number of UTxOs."
 
     let scriptValue = o ^. ciTxOutValue
-        lookups = Constraints.ownPubKeyHash pkh P.<>
-                  Constraints.unspentOutputs utxos P.<>
-                  Constraints.typedValidatorLookups contractInst P.<>
-                  Constraints.otherScript contractValidator
+        lookups =    Constraints.ownPubKeyHash pkh
+                P.<> Constraints.unspentOutputs utxos
+                P.<> Constraints.typedValidatorLookups contractInst
+                P.<> Constraints.otherScript contractValidator
 
-        tx =      Constraints.mustSpendScriptOutput oref buildInRedeemer
-             P.<> Constraints.mustPayToPubKey pkh scriptValue
+        tx =    Constraints.mustSpendScriptOutput oref buildInRedeemer
+           P.<> Constraints.mustPayToPubKey pkh scriptValue
 
     _ <- submitTxConstraintsWith @Contracting lookups tx
 
