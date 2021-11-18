@@ -13,8 +13,8 @@ and spend-pay actions.
 
 # Other documents
 
-- public testnet log:
-- private testnet log:
+- (public testnet log)[https://github.com/imagineai/utxos-at-pab-test/blob/master/public-testnet-log]
+- (private testnet log)[https://github.com/imagineai/utxos-at-pab-test/blob/master/private-testnet-log]
 
 # Building and running
 
