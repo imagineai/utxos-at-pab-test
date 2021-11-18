@@ -1,0 +1,96 @@
+The next log is using only the endpoints of the contract. After this log you can
+found another one using the chain-index endpoints. Also here is the link to the
+transaction
+https://testnet.cardanoscan.io/address/addr_test1wpgtmn278n68xpsj8hmse6urxf37mfc0xsef2amg22qmqqsm56xzh?tab=transactions
+
+[pab:Info:19] [2021-11-18 13:57:02.45 UTC] Restoring PAB state ...
+[pab:Info:19] [2021-11-18 13:57:02.45 UTC] No constract instance were restored in the PAB state.
+[pab:Info:19] [2021-11-18 13:57:02.45 UTC] Starting PAB backend server on port 9080
+[pab:Info:143] [2021-11-18 13:58:45.40 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Starting contract."
+[pab:Info:143] [2021-11-18 13:58:45.40 UTC] Initialising contract Init with ID d78cb386-ba8e-4792-a28f-ed48d738e995
+[pab:Info:143] [2021-11-18 13:58:45.41 UTC] Activated instance d78cb386-ba8e-4792-a28f-ed48d738e995 on W41c48ec
+[pab:Info:145] [2021-11-18 13:58:45.52 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Contract started."
+[pab:Info:145] [2021-11-18 13:58:45.52 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Addr: Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}"
+[pab:Info:145] [2021-11-18 13:59:06.06 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 13:59:06.06 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList []"
+[pab:Info:145] [2021-11-18 13:59:35.90 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 13:59:35.91 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList []"
+[pab:Info:145] [2021-11-18 13:59:49.72 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 13:59:49.72 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList []"
+[pab:Info:145] [2021-11-18 14:00:14.87 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:00:14.88 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList []"
+[pab:Info:145] [2021-11-18 14:00:15.72 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:00:16.00 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList []"
+[pab:Info:145] [2021-11-18 14:00:26.43 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:00:26.43 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList []"
+[pab:Info:145] [2021-11-18 14:02:04.78 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:02:05.94 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList [(TxOutRef {txOutRefId = 7501e7af0dbfd286d15916e47b231eb9697c298457a8c67ee4b79151a1fa9d02, txOutRefIdx = 0}
+                                                                                                                  , ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                  , _ciTxOutValidator = Left 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002
+                                                                                                                  , _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                  , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                        ]"
+[pab:Info:145] [2021-11-18 14:06:28.07 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling spend and pay again endpoint."
+[pab:Info:145] [2021-11-18 14:06:28.37 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Operation spend and pay again submitted successfully."
+[pab:Info:145] [2021-11-18 14:06:35.35 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:06:35.42 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList [(TxOutRef {txOutRefId = 7501e7af0dbfd286d15916e47b231eb9697c298457a8c67ee4b79151a1fa9d02, txOutRefIdx = 0}
+                                                                                                                  ,ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                  , _ciTxOutValidator = Left 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002
+                                                                                                                  , _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                  , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                        ]"
+[pab:Info:145] [2021-11-18 14:07:06.61 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:07:06.68 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList [(TxOutRef {txOutRefId = 7501e7af0dbfd286d15916e47b231eb9697c298457a8c67ee4b79151a1fa9d02, txOutRefIdx = 0}
+                                                                                                                  , ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                  , _ciTxOutValidator = Left 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002
+                                                                                                                  , _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                  , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                       ]"
+[pab:Info:145] [2021-11-18 14:07:36.87 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:07:37.01 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList [(TxOutRef {txOutRefId = 63a1977d36037e3c8d798d0f019be4a4a4d06cd6a6d982dc6110849eac5c3703, txOutRefIdx = 0}
+                                                                                                                  , ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                  , _ciTxOutValidator = Right Validator { <script> }
+                                                                                                                  , _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                  , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                       ,(TxOutRef {txOutRefId = 7501e7af0dbfd286d15916e47b231eb9697c298457a8c67ee4b79151a1fa9d02, txOutRefIdx = 0}
+                                                                                                                  , ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                  , _ciTxOutValidator = Right Validator { <script> }
+                                                                                                                  , _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                  , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                       ]"
+[pab:Info:145] [2021-11-18 14:10:45.41 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:10:45.57 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList [(TxOutRef {txOutRefId = 63a1977d36037e3c8d798d0f019be4a4a4d06cd6a6d982dc6110849eac5c3703, txOutRefIdx = 0}
+                                                                                                                  , ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                  , _ciTxOutValidator = Right Validator { <script> }, _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                  , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                        ,(TxOutRef {txOutRefId = 7501e7af0dbfd286d15916e47b231eb9697c298457a8c67ee4b79151a1fa9d02, txOutRefIdx = 0}
+                                                                                                                   ,ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                   , _ciTxOutValidator = Right Validator { <script> }
+                                                                                                                   , _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                   , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                         ]"
+[pab:Info:145] [2021-11-18 14:11:37.53 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Calling utxos endpoint."
+[pab:Info:145] [2021-11-18 14:11:37.67 UTC] d78cb386-ba8e-4792-a28f-ed48d738e995: "Got utxos: fromList [(TxOutRef {txOutRefId = 63a1977d36037e3c8d798d0f019be4a4a4d06cd6a6d982dc6110849eac5c3703, txOutRefIdx = 0}
+                                                                                                                  , ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                  , _ciTxOutValidator = Right Validator { <script> }
+                                                                                                                  , _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                  , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                       ,(TxOutRef {txOutRefId = 7501e7af0dbfd286d15916e47b231eb9697c298457a8c67ee4b79151a1fa9d02, txOutRefIdx = 0}
+                                                                                                                 ,ScriptChainIndexTxOut {_ciTxOutAddress = Address {addressCredential = ScriptCredential 50bdcd5e3cf47306123df70ceb833263eda70f34329577685281b002, addressStakingCredential = Nothing}
+                                                                                                                 , _ciTxOutValidator = Right Validator { <script> }
+                                                                                                                 , _ciTxOutDatum = Right (Datum {getDatum = Constr 0 []})
+                                                                                                                 , _ciTxOutValue = Value (Map [(,Map [(\"\",3000000)])])})
+                                                                                                       ]"
+
+
+Using the chain-index endpoints:
+
+curl -X 'POST' 'http://localhost:9083/utxo-at-address'   -H 'accept: application/json;charset=utf-8'   -H 'Content-Type: application/json;charset=utf-8'   -d @addr.json
+
+[{"tipBlockId":"4a2af6afdb85d1573336430981b8b51ba56af0da4a5c2137d7368a19a1788282","tipSlot":{"getSlot":42878772},"tipBlockNo":3083327,"tag":"Tip"}
+ , {"nextPageQuery":null,"pageItems":[ {"txOutRefId":{"getTxId":"63a1977d36037e3c8d798d0f019be4a4a4d06cd6a6d982dc6110849eac5c3703"},"txOutRefIdx":0}
+                                     , {"txOutRefId":{"getTxId":"7501e7af0dbfd286d15916e47b231eb9697c298457a8c67ee4b79151a1fa9d02"},"txOutRefIdx":0}
+                                     ]
+ ,"currentPageQuery":{"pageQuerySize":{"getPageSize":60},"pageQueryLastItem":null}
+ }
+]
